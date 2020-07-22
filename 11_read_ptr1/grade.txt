@@ -1,0 +1,9 @@
+Grading at Wed Jul 22 14:36:32 UTC 2020
+Attempting to compile test.c
+gcc -c test.c
+gcc -o test test.o
+compiled
+Your file matched the expected output
+Your output matched what we expected
+
+Overall Grade: PASSED
