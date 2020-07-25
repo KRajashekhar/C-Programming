@@ -1,28 +1,17 @@
-Grading at Sat Jul 25 07:53:41 UTC 2020
+Grading at Sat Jul 25 08:10:57 UTC 2020
 Attempting to compile maxSeq.c 
-maxSeq.c: In function ‘maxSeq’:
-maxSeq.c:15:28: error: expected ‘)’ before ‘}’ token
-   for(int i = 1; i < n; i++}
-                            ^
-maxSeq.c:15:28: error: expected expression before ‘}’ token
-maxSeq.c:13:7: error: unused variable ‘large_length’ [-Werror=unused-variable]
-   int large_length = length;
-       ^
-maxSeq.c: At top level:
-maxSeq.c:16:3: error: expected identifier or ‘(’ before ‘{’ token
-   {
-   ^
-maxSeq.c:27:3: error: expected identifier or ‘(’ before ‘return’
-   return large_length;
-   ^
-maxSeq.c:28:1: error: expected identifier or ‘(’ before ‘}’ token
- }
- ^
-maxSeq.c: In function ‘maxSeq’:
-maxSeq.c:15:28: error: control reaches end of non-void function [-Werror=return-type]
-   for(int i = 1; i < n; i++}
-                            ^
-cc1: all warnings being treated as errors
-The code did not compile!
+Linking your object file with our test main
+#################################################
+testcase2:
+array size:0 was Correct
+#################################################
+testcase3:
+array size:1 was Correct
+#################################################
+testcase4:
+array size:100 was Incorrect
+#################################################
+testcase5:
+array size:5000 was Incorrect
 
-Overall Grade: F
+Overall Grade: D
