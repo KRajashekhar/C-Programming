@@ -16,6 +16,10 @@ size_t maxSeq(int *array, size_t n){
   {
     if(array[i] > array[i-1]){
       length++;
+      if(i==n-1)
+	{
+	  large_length = length;
+	}
     }
     else{
       if(length > large_length){
