@@ -12,7 +12,7 @@ size_t maxSeq(int *array, size_t n){
   int length = 1;
   int large_length = length;
 
-  for(int i = 1; i < n; i++}
+  for(int i = 1; i < n; i++)
   {
     if(array[i] > array[i-1]){
       length++;
