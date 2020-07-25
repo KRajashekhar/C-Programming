@@ -1,4 +1,4 @@
-Grading at Sat Jul 25 08:15:55 UTC 2020
+Grading at Sat Jul 25 08:19:26 UTC 2020
 Attempting to compile maxSeq.c 
 Linking your object file with our test main
 #################################################
@@ -12,6 +12,6 @@ testcase4:
 array size:100 was Correct
 #################################################
 testcase5:
-array size:5000 was Incorrect
+array size:5000 was Correct
 
-Overall Grade: C
+Overall Grade: A
