@@ -1,9 +1,9 @@
-Grading at Sun Jul 26 16:16:32 UTC 2020
+Grading at Sun Jul 26 16:23:53 UTC 2020
 Attempting to compile  reverse.c
 reverse.c: In function ‘reverse’:
-reverse.c:25:3: error: implicit declaration of function ‘strrev’ [-Werror=implicit-function-declaration]
-   strrev(str);
-   ^
+reverse.c:30:14: error: implicit declaration of function ‘string_length’ [-Werror=implicit-function-declaration]
+     length = string_length(str);
+              ^
 cc1: all warnings being treated as errors
 The code did not compile!
 
