@@ -5,12 +5,12 @@
 void reverse(char * str) {
   //WRITE ME!
   int size=0;
-  int front=0;
+  int front=0,back;
   while(str[size]!='\0')
     {
       size++;
     }
-  int back = size-1;
+  back = size-1;
   while(back > front)
     {
       char temp = str[back];
