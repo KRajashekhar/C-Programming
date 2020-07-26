@@ -4,7 +4,7 @@
 
 void reverse(char * str) {
   //WRITE ME!
-  int size=0;
+  /*  int size=0;
   int front=0,back;
   while(str[size]!='\0')
     {
@@ -21,7 +21,8 @@ void reverse(char * str) {
       back--;
       front++;
     }
-    }
+    }*/
+  strrev(str);
 }
 
 int main(void) {
