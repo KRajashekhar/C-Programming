@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void reverse(char * str) {
+//void reverse(char * str) {
   //WRITE ME!
   /*  int size=0;
   int front=0,back;
@@ -22,8 +22,39 @@ void reverse(char * str) {
       front++;
     }
     }*/
-  strrev(str);
-}
+  void reverse(char *str)
+  {
+    int length, c;
+    char *begin, *end, temp;
+
+    length = string_length(str);
+    begin  = str;
+    end    = str;
+
+    for (c = 0; c < length - 1; c++)
+      end++;
+
+    for (c = 0; c < length/2; c++)
+      {
+	temp   = *end;
+	*end   = *begin;
+	*begin = temp;
+
+	begin++;
+	end--;
+      }
+  }
+
+  int string_length(char *pointer)
+  {
+    int c = 0;
+
+    while( *(pointer + c) != '\0' )
+      c++;
+
+    return c;
+  }
+
 
 int main(void) {
   char str0[] = "";
