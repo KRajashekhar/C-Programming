@@ -27,10 +27,13 @@
     int length, c;
     char *begin, *end, temp;
 
-    length = string_length(str);
+    length = 0;
     begin  = str;
     end    = str;
 
+    while( *(str + length) != '\0' )
+      length++;
+    
     for (c = 0; c < length - 1; c++)
       end++;
 
@@ -45,15 +48,7 @@
       }
   }
 
-  int string_length(char *pointer)
-  {
-    int c = 0;
-
-    while( *(pointer + c) != '\0' )
-      c++;
-
-    return c;
-  }
+ 
 
 
 int main(void) {
