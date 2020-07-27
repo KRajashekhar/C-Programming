@@ -29,16 +29,37 @@ int getNthBit(uint32_t number, int bit) {
  *
  * - Put the individual bits of each number into the "bits" array.
  *   The bits put into this array should be ordered so that the first
- *   32 bits represent nums[0], the next 32 bits are nums[1], and so
+  *   32 bits represent nums[0], the next 32 bits are nums[1], and so
  *   on.  Within each number, the most significant bit (bit 31) should
  *   come first, and the least significant bit (bit 0) should come last.
  *   That is, bits[0] should be bit 31 of nums[0], bits[1] should
  *   be bit 30 of nums[0], and so on.
  */
 void numToBits(uint32_t * nums, int nNums, int * bits, int nBits) {
-
-}
-
+  if(32*nNums != nBits)
+    {
+      printf("Invalid call to numToBits! nBits is %d, nNums is %d\n",nBits,nNums);
+      return;
+    }
+  for(int i = 0; i < nNums; i++)
+    {
+      if (nums[i] >= 1ull << 32){
+        printf("Invalid call to numToBits! nBits is %d, nNums is %d\n",nBits,nNums);
+	return;
+      }
+    }
+  int k = 0;
+  for(int j=0; j<nBits; ){
+      int i = 31;
+      while(i>=0 && i<32)
+	{
+	  bits[j] = getNthBit(nums[k],i);
+	  i--;
+	  j++;
+	}
+      k++;
+    }
+ }
 void doTest(uint32_t * nums, int n) {
   int bits[n *32];
   numToBits(nums, n, bits, n*32);
