@@ -10,6 +10,11 @@ void reverse(char * str) {
     {
       size++;
     }
+  if(size == 0 || str == NULL)
+    {
+      return;
+    }
+  
   if(size != 0)
     {
       back = size-1;
