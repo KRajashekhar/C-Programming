@@ -10,7 +10,6 @@ void reverse(char * str) {
     }
    int size=0;
   int front=0,back;
-  if(size != 0){
     while(str[size]!='\0')
     {
       size++;
@@ -23,7 +22,7 @@ void reverse(char * str) {
       back--;
       front++;
     }
-}   
+
 }
  
 
