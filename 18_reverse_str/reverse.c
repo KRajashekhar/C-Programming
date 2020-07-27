@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-//void reverse(char * str) {
+void reverse(char * str) {
   //WRITE ME!
-  /*  int size=0;
+   int size=0;
   int front=0,back;
   while(str[size]!='\0')
     {
@@ -21,33 +21,8 @@
       back--;
       front++;
     }
-    }*/
-  void reverse(char *str)
-  {
-    int length, c;
-    char *begin, *end, temp;
-
-    length = 0;
-    begin  = str;
-    end    = str;
-
-    while( *(str + length) != '\0' )
-      length++;
-    
-    for (c = 0; c < length - 1; c++)
-      end++;
-
-    for (c = 0; c < length/2; c++)
-      {
-	temp   = *end;
-	*end   = *begin;
-	*begin = temp;
-
-	begin++;
-	end--;
-      }
-  }
-
+    }
+}
  
 
 
