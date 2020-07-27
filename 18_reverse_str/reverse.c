@@ -6,8 +6,8 @@ void reverse(char * str) {
   //WRITE ME!
   if(str == NULL || *str == '\0')
     {
-           return
-	     }
+      return;
+    }
    int size=0;
   int front=0,back;
   while(str[size]!='\0')
