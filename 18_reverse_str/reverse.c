@@ -4,6 +4,10 @@
 
 void reverse(char * str) {
   //WRITE ME!
+  if(str == NULL)
+    {
+           return
+	     }
    int size=0;
   int front=0,back;
   while(str[size]!='\0')
@@ -12,7 +16,7 @@ void reverse(char * str) {
     }
   if(size == 0 || str == NULL)
     {
-      return;
+     return
     }
   
   if(size != 0)
