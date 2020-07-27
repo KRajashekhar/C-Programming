@@ -4,7 +4,7 @@
 
 void reverse(char * str) {
   //WRITE ME!
-  if(str == NULL)
+  if(str == NULL || *str == '\0')
     {
            return
 	     }
@@ -14,11 +14,6 @@ void reverse(char * str) {
     {
       size++;
     }
-  if(size == 0 || str == NULL)
-    {
-     return
-    }
-  
   if(size != 0)
     {
       back = size-1;
