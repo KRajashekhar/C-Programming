@@ -14,6 +14,7 @@ void reverse(char * str) {
     {
       size++;
     }
+    back = size-1;
   while(back > front)
     {
       char temp = str[back];
