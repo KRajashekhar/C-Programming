@@ -8,7 +8,7 @@ int main() {
   if(power(2,1) != 2) { printf("1\n"); exit(EXIT_FAILURE);   }
   if(power(100,2) != 10000 ) { printf("2\n");  exit(EXIT_FAILURE);  }
   if(power(10000000,1) != 10000000) { printf("3\n");  exit(EXIT_FAILURE);    }
-
+  printf("success\n");
   exit(EXIT_SUCCESS);
  
 }
