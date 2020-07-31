@@ -241,7 +241,7 @@ void qsort(void *base, size_t nmemb, size_t size, int (*compr)(const void*, cons
 int compare_hands(deck_t * hand1, deck_t * hand2) {
 
   qsort(hand1->cards, hand1->n_cards, sizeof(card_t *), card_ptr_comp);
-  qsort(hand1->cards, hand1->n_cards, sizeof(card_t *), card_ptr_comp);
+  qsort(hand2->cards, hand2->n_cards, sizeof(card_t *), card_ptr_comp);
 
   hand_eval_t hand_e1;
   hand_eval_t hand_e2;
@@ -270,7 +270,6 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 	      return -1;
 	    }
 	}
-      return 0;
     }
   return 0;
 }
