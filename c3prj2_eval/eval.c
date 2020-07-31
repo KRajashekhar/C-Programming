@@ -25,11 +25,8 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
 	{
 	  return 1;
 	}
-      else
-	{
-	  return 0;
-	}
     }
+  return 0;
 }
 
 suit_t flush_suit(deck_t * hand) {
@@ -122,54 +119,46 @@ ssize_t  find_secondary_pair(deck_t * hand,
 int is_n_length_straight_at(deck_t *hand, size_t index, suit_t fs, int n)
 {
   if (fs == NUM_SUITS)
-    {int val =  hand -> cards[index]->value;
+    {unsigned val =  hand -> cards[index]->value;
       for( size_t i = index+1; i < hand-> n_cards ; i++)
 	{
 	  if (hand->cards[i]->value == val-1)
 	    {
 	      val--;
 	      n--;
+	      if(n==1)
+		{
+		  return 1;
+		}
 	    }
-	  else if(hand->cards[i]->value != val && hand->cards[i]->value != val-1)
+	  else if(hand->cards[i]->value != val)
 	    {
 	      return 0;
 	    }
 	}
-    
-  if(n == 0)
-    {
-      return 1;
+	  return 0;
+     
     }
   else
     {
-      return 0;
-    }
-    }
-  else
-    {
-      int val =  hand -> cards[index]->value;
+      unsigned val =  hand -> cards[index]->value;
       for( size_t i = index+1; i < hand-> n_cards ; i++)
 	{
 	  if (hand->cards[i]->value == val-1 && hand->cards[i]->suit == fs)
 	    {
               val--;
 	      n--;
+	      if(n==1)
+		{
+		  return 1;
+		}
 	    }
-	  else if(hand->cards[i]->value != val && hand->cards[i]->value != val-1)
+	  else if(hand->cards[i]->value != val || hand->cards[i]->suit != fs)
 	    {
 	      return 0;
 	    }
 	}
-
-
-      if(n == 0)
-	{
-	  return 1;
-	}
-      else
-	{
-	  return 0;
-	}
+      return 0;
     }
 }
 int is_ace_low_straight_at(deck_t *hand, size_t index, suit_t fs)
@@ -182,9 +171,12 @@ int is_ace_low_straight_at(deck_t *hand, size_t index, suit_t fs)
     {
       for( size_t i = index+1; i < hand-> n_cards ; i++)
 	{
+	  if(hand->cards[i]->value == 5)
+	    {
 	  if(is_n_length_straight_at(hand,i,fs,4))
 	    {
 	      return 1;
+	    }
 	    }
 	}
       return 0;
@@ -196,9 +188,12 @@ int is_ace_low_straight_at(deck_t *hand, size_t index, suit_t fs)
 
 	  for( size_t i = index+1; i < hand-> n_cards ; i++)
 	    {
+	      if(hand->cards[i]->value == 5)
+		{
 	      if(is_n_length_straight_at(hand,i,fs,4))
 		{
 		  return 1;
+		}
 		}
 	    }
 	}
