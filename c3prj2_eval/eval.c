@@ -251,11 +251,11 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 
   if(hand_e1.ranking > hand_e2.ranking)
     {
-      return 1;
+      return -1;
     }
   if(hand_e2.ranking > hand_e1.ranking)
     {
-      return -1;
+      return 1;
     }
   if(hand_e1.ranking == hand_e2.ranking)
     {
@@ -263,11 +263,11 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
 	{
 	  if(hand_e1.cards[i]->value > hand_e2.cards[i]->value)
 	    {
-	      return 1;
+	      return -1;
 	    }
 	  if(hand_e2.cards[i]->value > hand_e1.cards[i]->value)
 	    {
-	      return -1;
+	      return 1;
 	    }
 	}
       return 0;
