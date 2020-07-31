@@ -227,6 +227,7 @@ hand_eval_t build_hand_from_match(deck_t * hand,
 	  j++;
 	  i++;
 	}
+      i++;
     }
   return ans;
 }
