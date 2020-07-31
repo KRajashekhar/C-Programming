@@ -153,7 +153,7 @@ int is_n_length_straight_at(deck_t *hand, size_t index, suit_t fs, int n)
 		  return 1;
 		}
 	    }
-	  else if(hand->cards[i]->value != val || hand->cards[i]->suit != fs)
+	  else if(hand->cards[i]->value != val)
 	    {
 	      return 0;
 	    }
