@@ -249,11 +249,11 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
   hand_e1 = evaluate_hand(hand1);
   hand_e2 = evaluate_hand(hand2);
 
-  if(hand_e1.ranking > hand_e2.ranking)
+  if(hand_e1.ranking < hand_e2.ranking)
     {
       return 1;
     }
-  if(hand_e2.ranking > hand_e1.ranking)
+  if(hand_e2.ranking < hand_e1.ranking)
     {
       return -1;
     }
@@ -261,11 +261,11 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
     {
       for(int i=0; i<5; i++)
 	{
-	  if(hand_e1.cards[i]->value > hand_e2.cards[i]->value)
+	  if(hand_e1.cards[i]->value <  hand_e2.cards[i]->value)
 	    {
 	      return 1;
 	    }
-	  if(hand_e2.cards[i]->value > hand_e1.cards[i]->value)
+	  if(hand_e2.cards[i]->value <  hand_e1.cards[i]->value)
 	    {
 	      return -1;
 	    }
@@ -273,6 +273,7 @@ int compare_hands(deck_t * hand1, deck_t * hand2) {
     }
   return 0;
 }
+
 
 
 //You will write this function in Course 4.
@@ -356,7 +357,7 @@ hand_eval_t evaluate_hand(deck_t * hand) {
       ans.ranking = STRAIGHT_FLUSH;
       return ans;
     }
-  }
+   }
   unsigned * match_counts = get_match_counts(hand);
   unsigned n_of_a_kind = get_largest_element(match_counts, hand->n_cards);
   assert(n_of_a_kind <= 4);
