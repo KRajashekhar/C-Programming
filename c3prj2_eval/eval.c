@@ -101,15 +101,15 @@ ssize_t  find_secondary_pair(deck_t * hand,
 			     size_t match_idx) {
   for(size_t i=0; i<hand->n_cards; i++)
     {
-      int count = 0;
+      *match_counts = 0;
       for(size_t j=0; j<hand->n_cards; j++)
 	{
-	  if(hand->cards[i]->value != match_counts[match_idx] && hand->cards[i]->value == hand->cards[j]->value)
+	  if(hand->cards[i]->value != hand->cards[match_idx]->value && hand->cards[i]->value == hand->cards[j]->value)
 	    {
-	     count++;
+	      (*match_counts)++;
 	    }
 	}
-      if(count > 1)
+      if(*match_counts > 1)
 	{
 	  return i;
 	}
@@ -131,10 +131,6 @@ int is_n_length_straight_at(deck_t *hand, size_t index, suit_t fs, int n)
 		  return 1;
 		}
 	    }
-	  else if(hand->cards[i]->value != val)
-	    {
-	      return 0;
-	    }
 	}
 	  return 0;
      
@@ -144,7 +140,7 @@ int is_n_length_straight_at(deck_t *hand, size_t index, suit_t fs, int n)
       unsigned val =  hand -> cards[index]->value;
       for( size_t i = index+1; i < hand-> n_cards ; i++)
 	{
-	  if (hand->cards[i]->value == val-1 && hand->cards[i]->suit == fs)
+	  if (hand->cards[i]->value == val-1 && hand->cards[i]->suit == fs && hand->cards[index]->suit == fs)
 	    {
               val--;
 	      n--;
@@ -152,10 +148,6 @@ int is_n_length_straight_at(deck_t *hand, size_t index, suit_t fs, int n)
 		{
 		  return 1;
 		}
-	    }
-	  else if(hand->cards[i]->value != val && (hand->cards[i]->value == val-1 && hand->cards[i]->suit != fs))
-	    {
-	      return 0;
 	    }
 	}
       return 0;
