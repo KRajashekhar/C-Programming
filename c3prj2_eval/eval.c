@@ -221,14 +221,18 @@ hand_eval_t build_hand_from_match(deck_t * hand,
   int i=0;
   while(j<5)
     {
-      if( i < idx && i>=n)
+      if( i < idx || i>=n)
 	{
 	  ans.cards[j] = hand->cards[i];
 	  j++;
 	  i++;
 	}
+      else
+	{
       i++;
+	}
     }
+  
   return ans;
 }
 
