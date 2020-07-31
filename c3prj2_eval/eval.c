@@ -11,21 +11,18 @@ int card_ptr_comp(const void * vp1, const void * vp2) {
     {
       return -1;
     }
-  else if ( (*cp1)->value < (*cp2)->value )
+ if ( (*cp1)->value < (*cp2)->value )
     {
       return 1;
     }
-  else
-    {
-      if( (*cp1)->suit > (*cp2)->suit )
+  if( (*cp1)->suit > (*cp2)->suit )
 	{
 	  return -1;
 	}
-      else if ( (*cp1)->suit < (*cp2)->value )
+  if ( (*cp1)->suit < (*cp2)->value )
 	{
 	  return 1;
 	}
-    }
   return 0;
 }
 
@@ -222,7 +219,7 @@ suit_t flush_suit(deck_t * hand) {
     hand_eval_t ans;
     ans.ranking = what;
     int j = 0;
-    for(size_t i = idx ; i <= n; i++)
+    for(size_t i = idx ; i < n; i++)
       {
 	ans.cards[j] = hand->cards[i];
 	j++;
@@ -230,7 +227,7 @@ suit_t flush_suit(deck_t * hand) {
     int i=0;
     while(j<5)
       {
-	if( i < idx || i>n)
+	if( i < idx || i>=n)
 	  {
 	    ans.cards[j] = hand->cards[i];
 	    j++;
@@ -266,9 +263,8 @@ suit_t flush_suit(deck_t * hand) {
       {
 	return -1;
       }
-    if(hand_e1.ranking == hand_e2.ranking)
-      {
-	for(int i=0; i<5; i++)
+    
+   for(int i=0; i<5; i++)
 	  {
 	    if(hand_e1.cards[i]->value >  hand_e2.cards[i]->value)
 	      {
@@ -279,7 +275,7 @@ suit_t flush_suit(deck_t * hand) {
 		return -1;
 	      }
 	  }
-      }
+      
     return 0;
   }
 
