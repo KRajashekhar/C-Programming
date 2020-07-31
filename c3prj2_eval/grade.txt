@@ -1,4 +1,4 @@
-Grading at Fri Jul 31 10:04:39 UTC 2020
+Grading at Fri Jul 31 10:16:17 UTC 2020
 Compiling your code
 rm -f test poker cards.o my-test-main.o *~
 cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o deck.o deck.c
@@ -7,68 +7,68 @@ cc -ggdb3 -Wall -Werror -pedantic -std=gnu99   -c -o cards.o cards.c
 gcc -o test-eval -ggdb3 deck.o deck-c4.o eval-c4.o eval.o test-eval.o cards.o input.o future.o
 Testcase 1: Trying hands with nothing
 Valgrind returned an error status
-==552== Memcheck, a memory error detector
-==552== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==552== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==552== Command: ./test-eval inp.1.txt
-==552== Parent PID: 551
-==552== 
+==752== Memcheck, a memory error detector
+==752== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==752== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==752== Command: ./test-eval inp.1.txt
+==752== Parent PID: 751
+==752== 
 Testcase 2: Trying hands with pairs
 Valgrind returned an error status
-==557== Memcheck, a memory error detector
-==557== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==557== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==557== Command: ./test-eval inp.2.txt
-==557== Parent PID: 556
-==557== 
+==757== Memcheck, a memory error detector
+==757== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==757== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==757== Command: ./test-eval inp.2.txt
+==757== Parent PID: 756
+==757== 
 Testcase 3: Trying hands with 2 pairs
 Valgrind returned an error status
-==562== Memcheck, a memory error detector
-==562== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==562== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==562== Command: ./test-eval inp.3.txt
-==562== Parent PID: 561
-==562== 
+==762== Memcheck, a memory error detector
+==762== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==762== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==762== Command: ./test-eval inp.3.txt
+==762== Parent PID: 761
+==762== 
 Testcase 4: Trying hands with 3 of a kind
 Valgrind returned an error status
-==567== Memcheck, a memory error detector
-==567== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==567== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==567== Command: ./test-eval inp.4.txt
-==567== Parent PID: 566
-==567== 
+==767== Memcheck, a memory error detector
+==767== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==767== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==767== Command: ./test-eval inp.4.txt
+==767== Parent PID: 766
+==767== 
 Testcase 5: Trying hands with straights
 Valgrind returned an error status
-==572== Memcheck, a memory error detector
-==572== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==572== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==572== Command: ./test-eval inp.5.txt
-==572== Parent PID: 571
-==572== 
+==772== Memcheck, a memory error detector
+==772== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==772== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==772== Command: ./test-eval inp.5.txt
+==772== Parent PID: 771
+==772== 
 Testcase 6: Trying hands with flushes
 Valgrind returned an error status
-==577== Memcheck, a memory error detector
-==577== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==577== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==577== Command: ./test-eval inp.6.txt
-==577== Parent PID: 576
-==577== 
+==777== Memcheck, a memory error detector
+==777== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==777== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==777== Command: ./test-eval inp.6.txt
+==777== Parent PID: 776
+==777== 
 Testcase 7: Trying hands with full houses
 Valgrind returned an error status
-==582== Memcheck, a memory error detector
-==582== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==582== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==582== Command: ./test-eval inp.7.txt
-==582== Parent PID: 581
-==582== 
+==782== Memcheck, a memory error detector
+==782== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==782== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==782== Command: ./test-eval inp.7.txt
+==782== Parent PID: 781
+==782== 
 Testcase 8: Trying hands with 4 of a kind
 Valgrind returned an error status
-==587== Memcheck, a memory error detector
-==587== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==587== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==587== Command: ./test-eval inp.8.txt
-==587== Parent PID: 586
-==587== 
+==787== Memcheck, a memory error detector
+==787== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==787== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==787== Command: ./test-eval inp.8.txt
+==787== Parent PID: 786
+==787== 
 Testcase 9: Trying hands with straight flushes
  Checking the output 
 Line_54_did_not_match
@@ -197,11 +197,11 @@ Hand 1 wins!						      <
 ============================				      <
 Testcase 10: Trying each type of hand ranking
 Valgrind returned an error status
-==605== Memcheck, a memory error detector
-==605== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
-==605== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
-==605== Command: ./test-eval inp.10.txt
-==605== Parent PID: 604
-==605== 
+==805== Memcheck, a memory error detector
+==805== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==805== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==805== Command: ./test-eval inp.10.txt
+==805== Parent PID: 804
+==805== 
 
 Overall Grade: F
