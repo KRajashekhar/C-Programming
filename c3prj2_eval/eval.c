@@ -94,7 +94,7 @@ size_t get_match_index(unsigned * match_counts, size_t n,unsigned n_of_akind){
 	  return i;
 	}
     }
-  abort();
+  return EXIT_FAILURE;
 }
 ssize_t  find_secondary_pair(deck_t * hand,
 			     unsigned * match_counts,
