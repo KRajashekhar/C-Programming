@@ -255,11 +255,11 @@ suit_t flush_suit(deck_t * hand) {
     hand_e1 = evaluate_hand(hand1);
     hand_e2 = evaluate_hand(hand2);
 
-    if(hand_e1.ranking >  hand_e2.ranking)
+    if(hand_e1.ranking <  hand_e2.ranking)
       {
 	return 1;
       }
-    if(hand_e1.ranking < hand_e2.ranking)
+    if(hand_e1.ranking > hand_e2.ranking)
       {
 	return -1;
       }
