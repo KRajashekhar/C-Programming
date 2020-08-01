@@ -219,7 +219,7 @@ suit_t flush_suit(deck_t * hand) {
     hand_eval_t ans;
     ans.ranking = what;
     int j = 0;
-    for(size_t i = idx ; i <= n; i++)
+    for(size_t i = idx ; i <idx+ n; i++)
       {
 	ans.cards[j] = hand->cards[i];
 	j++;
@@ -227,7 +227,7 @@ suit_t flush_suit(deck_t * hand) {
     int i=0;
     while(j<5)
       {
-	if( i < idx || i>n)
+	if( i < idx || i>=n+idx)
 	  {
 	    ans.cards[j] = hand->cards[i];
 	    j++;
