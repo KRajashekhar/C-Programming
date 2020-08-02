@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
-void Decrypt(char * arr , size_t n){
+  void Decrypt(char * arr , size_t n){
   char alpha[27] = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','\0'} ;
   int index = 0;
   int frequency = 0;
-  for(int i = 0; i < n ;i++)
+  for(int i = 0; i < 26 ;i++)
     {
       int freq_i=0;
      
@@ -13,17 +13,16 @@ void Decrypt(char * arr , size_t n){
 	    {
 	      if(arr[j] == alpha[i])
 		{
-		  freq_i++;
+		  freq_i ++ ;
 	        }
 	    }
 	
-      if(freq_i >= frequency)
+      if(freq_i > frequency)
 	{
 	  frequency = freq_i;
 	   index = i;
 	}
     }
-  // printf("%c\n", alpha[index]);
   printf("%d\n", (index+22)%26);
   
 }
@@ -38,8 +37,7 @@ size_t  number_of_letters(FILE * f) {
       size++;
     }
   }
-  // printf("%zu\n", size);
-  return size;
+ return size;
   }
 
  
@@ -59,26 +57,27 @@ int main(int argc, char ** argv)
       return EXIT_FAILURE;
     }
   size_t n_letters  = number_of_letters(f);
-  //  int n_letters = 19;
-  char  arr[n_letters+1];
-  int c;
+  n_letters++;
+  char  arr[n_letters];
+  int c=0;
   int i = 0;
-  rewind(f);
-  while((c = fgetc(f)) != EOF)
+   rewind(f);
+   if(f == NULL)
+     {
+       perror("Could not open file");
+       return EXIT_FAILURE;
+     }
+  while((c = fgetc(f)) != EOF   && i < n_letters)
     {
       if(isalpha(c))
 	{
-	  //	  printf("%c\n",c);
-	  c = tolower(c);
+          c = tolower(c);
 	  arr[i] = c;
 	  i++;
 	}
     }
-  /*  for(int i=0; i< n_letters;i++)
-    {
-      printf("%c\n",arr[i]);
-      }*/
-    Decrypt(arr, n_letters+1);
+   Decrypt(arr, n_letters);
+
    if(fclose(f) != 0){
     perror("Failed to close the input file!");
     return EXIT_FAILURE;
