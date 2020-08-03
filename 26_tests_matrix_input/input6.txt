@@ -1,10 +1,10 @@
 0123456789
 abcdefghij
-klmnopqrs
+klmnopqrst
 uvwxyz!@#$
 %^&*()_+{}
 |:"<>?-=[]
 cprogrammi
 ngfileedit
 optionsbuf
-ferstoolst
+ferstoolsu
