@@ -44,12 +44,12 @@ int main(int argc, char** argv){
     row++;
   }
   if(row < 10) {
-    fprintf(stderr,"Number of rows is %d, which is less than 10",row);
+    fprintf(stderr,"Number of rows is %d, which is less than 10\n",row);
       return EXIT_FAILURE;
   }
 
   if(row > 10){
-    fprintf(stderr,"Number of rows is %d, which is more than 10",row);
+    fprintf(stderr,"Number of rows is %d, which is more than 10\n",row);
     return EXIT_FAILURE;
   }
 
