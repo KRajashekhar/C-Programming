@@ -23,8 +23,9 @@ int main(int argc, char ** argv) {
   size_t sz ;
   char **data = NULL;
   size_t len = 0;
-  size_t i=0;
+  size_t i;
   if(argc == 1) {
+    i = 0;
     while((len = getline(&line, &sz, stdin)) >= 0) {
 
       data = realloc(data,(i+1)*sizeof(*data));
@@ -34,10 +35,17 @@ int main(int argc, char ** argv) {
     }
     free(line);
     sortData(data, i);
+    for(int j=0; j<i; j++)
+      {
+	printf("%s\n",data[j]);
+	free(data[j]);
+      }
+    free(data);
   }
   else{
     for(int j = 1; j<argc; j++) {
       FILE * f = fopen(argv[j], "r");
+      i = 0;
       if(f == NULL){
 	fprintf(stderr,"could not open file\n");
 	return EXIT_FAILURE;
@@ -50,18 +58,18 @@ int main(int argc, char ** argv) {
 	i++;
       }
       free(line);
+      sortData(data,i);
+      for(int j=0; j<i; j++)
+	{
+	  printf("%s\n",data[j]);
+	  free(data[j]);
+	}
+      free(data);
       if(fclose(f) != 0) {
 	fprintf(stderr,"Failed to close the file\n");
 	return EXIT_FAILURE;
       }
-    }
-    sortData(data,i);
+    }   
   }
-  for(int j=0; j<i; j++) {
-
-    printf("%s\n",data[i]);
-    free(data[i]);
-  }
-  free(data);
   return EXIT_SUCCESS;
 }
