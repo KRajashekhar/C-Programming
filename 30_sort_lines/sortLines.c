@@ -16,55 +16,48 @@ void sortData(char ** data, size_t count) {
   qsort(data, count, sizeof(char *), stringOrder);
 }
 
-int main(int argc, char ** argv) {
-  
-  //WRITE YOUR CODE HERE!
+char ** sortFile(FILE *f, size_t* n){
   char *line = NULL;
   size_t sz ;
   char **data = NULL;
-  size_t len = 0;
-  size_t i;
-  if(argc == 1) {
-    i = 0;
-    while((len = getline(&line, &sz, stdin)) >= 0) {
-
-      data = realloc(data,(i+1)*sizeof(*data));
-      data[i] = line;
-      line = NULL;
-      i++;
-    }
-    free(line);
-    sortData(data, i);
-    for(int j=0; j<i; j++)
-      {
-	printf("%s\n",data[j]);
-	free(data[j]);
-      }
-    free(data);
+  size_t i=0;
+  while(getline(&line, &sz, f) >= 0) {
+    i++;
+    data = realloc(data,i*sizeof(*data));
+    data[i-1] = line;
+    line = NULL;
   }
-  else{
+  free(line);
+  sortData(data, i);
+  *n = i;
+  return data;
+}
+
+void printsortedFile(FILE * f)
+{
+  size_t n = 0;
+  char ** data = sortFile(f,&n);
+    for(int i=0; i<n; i++) {
+      printf("%s",data[i]);
+      free(data[i]);
+    }
+  free(data);
+}
+    
+int main(int argc, char ** argv) {
+  
+  //WRITE YOUR CODE HERE!
+  if(argc == 1) {
+    printsortedFile(stdin);
+  }
+  else if (argc > 1){
     for(int j = 1; j<argc; j++) {
       FILE * f = fopen(argv[j], "r");
-      i = 0;
       if(f == NULL){
 	fprintf(stderr,"could not open file\n");
 	return EXIT_FAILURE;
       }
-      while((len == getline(&line, &sz,f)) >=0 ) {
-
-	data = realloc(data, (i+1)*sizeof(*data));
-	data[i] = line;
-	line = NULL;
-	i++;
-      }
-      free(line);
-      sortData(data,i);
-      for(int j=0; j<i; j++)
-	{
-	  printf("%s\n",data[j]);
-	  free(data[j]);
-	}
-      free(data);
+      printsortedFile(f);
       if(fclose(f) != 0) {
 	fprintf(stderr,"Failed to close the file\n");
 	return EXIT_FAILURE;
