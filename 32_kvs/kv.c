@@ -50,7 +50,7 @@ kvarray_t * readKVs(const char * fname) {
     ans->pairs[ans->numPairs -1] = pair;
     line = NULL;
   }
-  free(NULL);
+  free(line);
 
   if(fclose(f) !=0){
     perror("could not close the file\n");
