@@ -92,7 +92,7 @@ deck_t * build_remaining_deck(deck_t ** hands, size_t n_hands) {
   hands_cards->n_cards = 0;
   for(int i=0; i<n_hands; i++) {
     for(int j=0; j<hands[i]->n_cards; j++) {
-      if((hands[i]->cards[j]->value != 0) && (hands[i]->cards[j]->suit != 0)) {
+      if(!((hands[i]->cards[j]->value == 0) && (hands[i]->cards[j]->suit == 0))) {
       add_card_to(hands_cards, *(hands[i]->cards[j]));
     }
     }
