@@ -1,4 +1,4 @@
-Grading at Sun Aug  9 06:45:46 UTC 2020
+Grading at Sun Aug  9 06:51:04 UTC 2020
 Compiling deck.c -> deck.o
 Compiling eval.c -> eval.o
 Compiling cards.c -> cards.o
@@ -13,97 +13,13 @@ Testing make_deck_exclude(deck_t *)
 - Test passed
 Testing build_remaining_deck(deck_t **, size_t)
 Testing with 1 hand
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Ks Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3s 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Ks Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3h 3d 3c 4s 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Ks Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5s 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Ks Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6s 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Ks Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7s 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Ks Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8s 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Ks Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9s 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Ks Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0s 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
 Testing with 2 hands
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Ks Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Js Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Ks Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qs Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Ks Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc As Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2h 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2h 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 3h 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2d 2c 3h 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 4h 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2d 2c 3d 3c 4h 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 5h 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2d 2c 3d 3c 4d 4c 5h 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
 Testing with 3 hands
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 6h 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6h 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 7h 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7h 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 8h 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8h 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 9h 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9h 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 0h Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0h 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As Jh Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jh Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As Qh Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qh Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As Kh Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kh Kd Kc Ah Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
 Testing with 4 hands
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As Ah 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ah Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2d 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2d 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 3d 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2c 3d 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 4d 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2c 3c 4d 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 5d 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2c 3c 4c 5d 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 6d 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2c 3c 4c 5c 6d 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 7d 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2c 3c 4c 5c 6c 7d 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 8d 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2c 3c 4c 5c 6c 7c 8d 8c 9d 9c 0d 0c Jd Jc Qd Qc 
 Testing with 5 hands
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 9d 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2c 3c 4c 5c 6c 7c 8c 9d 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 0d Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2c 3c 4c 5c 6c 7c 8c 9c 0d 0c Jd Jc Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As Jd Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jd Jc Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As Qd Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qd Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As Kd Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kd Kc Ad Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As Ad 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kc Ad Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kc Ac 2c 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kc Ac 3c 4c 5c 6c 7c 8c 9c 0c Jc Qc 
 Testing with 6 hands
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 4c 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kc Ac 4c 5c 6c 7c 8c 9c 0c Jc Qc 
-Expected deck: 2s 3s 4s 5s 6s 7s 8s 9s 0s Js Qs Ks As 5c 6c 7c 8c 9c 0c Jc Qc Kc Ac 
-Your deck: Kc Ac 5c 6c 7c 8c 9c 0c Jc Qc 
-- Test failed
+- Test passed
 Testing get_match_count(deck_t *)
 - Test passed
 
-Overall Grade: B
+Overall Grade: A
