@@ -1,0 +1,22 @@
+Grading at Sun Aug  9 06:34:58 UTC 2020
+Compiling deck.c -> deck.o
+deck.c: In function ‘add_card_to’:
+deck.c:59:25: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
+   deck->cards = realloc(deck->n_cards* sizeof(*deck->cards));
+                         ^
+In file included from deck.c:2:0:
+/usr/include/stdlib.h:480:14: note: expected ‘void *’ but argument is of type ‘long unsigned int’
+ extern void *realloc (void *__ptr, size_t __size)
+              ^
+deck.c:59:17: error: too few arguments to function ‘realloc’
+   deck->cards = realloc(deck->n_cards* sizeof(*deck->cards));
+                 ^
+deck.c: In function ‘add_empty_card’:
+deck.c:65:38: error: ‘card’ undeclared (first use in this function)
+   card_t * emt_card = malloc(sizeof(*card));
+                                      ^
+deck.c:65:38: note: each undeclared identifier is reported only once for each function it appears in
+cc1: all warnings being treated as errors
+Compilation of deck.c failed
+
+Overall Grade: F
