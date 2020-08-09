@@ -1,4 +1,4 @@
-Grading at Sun Aug  9 06:34:58 UTC 2020
+Grading at Sun Aug  9 06:37:49 UTC 2020
 Compiling deck.c -> deck.o
 deck.c: In function ‘add_card_to’:
 deck.c:59:25: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
