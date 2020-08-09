@@ -286,7 +286,20 @@ suit_t flush_suit(deck_t * hand) {
   //implementation in eval-c4.o) so that the
   //other functions we have provided can make
   //use of get_match_counts.
-  unsigned * get_match_counts(deck_t * hand) ;
+unsigned * get_match_counts(deck_t * hand) {
+  unsigned * ans = malloc(hand->n_cards*sizeof(*ans));
+  for(int i=0; i<hand->n_cards; i++) {
+    unsigned   count = 0;
+    for(int j=0; j<hand->n_cards; j++) {
+      if(hand->cards[i]->value == hands->cards[j]->value) {
+	count++;
+      }
+    }
+    ans[i] = count;
+  }
+  return ans;
+}
+    
 
   // We provide the below functions.  You do NOT need to modify them
   // In fact, you should not modify them!
