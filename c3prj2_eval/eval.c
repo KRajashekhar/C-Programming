@@ -291,7 +291,7 @@ unsigned * get_match_counts(deck_t * hand) {
   for(int i=0; i<hand->n_cards; i++) {
     unsigned   count = 0;
     for(int j=0; j<hand->n_cards; j++) {
-      if(hand->cards[i]->value == hands->cards[j]->value) {
+      if(hand->cards[i]->value == hand->cards[j]->value) {
 	count++;
       }
     }
