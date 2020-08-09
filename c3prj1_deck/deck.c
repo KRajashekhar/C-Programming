@@ -56,13 +56,13 @@ void add_card_to(deck_t *deck, card_t c) {
   card->value = c.value;
   card->suit = c.suit;
   deck->n_cards++;
-  deck->cards = realloc(deck->n_cards* sizeof(*deck->cards));
+  deck->cards = realloc(deck->cards,deck->n_cards* sizeof(*deck->cards));
   deck->cards[deck->n_cards -1] = card;
 }
 
 card_t * add_empty_card(deck_t * deck) {
   assert(deck != NULL);
-  card_t * emt_card = malloc(sizeof(*card));
+  card_t * emt_card = malloc(sizeof(*emt_card));
   emt_card->value = 0;
   emt_card->suit = 0;
   add_card_to(deck, *emt_card);
