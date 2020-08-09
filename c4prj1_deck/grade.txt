@@ -1,10 +1,11 @@
-Grading at Sun Aug  9 06:42:20 UTC 2020
+Grading at Sun Aug  9 06:43:58 UTC 2020
 Compiling deck.c -> deck.o
-deck.c: In function ‘add_empty_card’:
-deck.c:69:8: error: ‘card’ undeclared (first use in this function)
-   free(card);
-        ^
-deck.c:69:8: note: each undeclared identifier is reported only once for each function it appears in
-Compilation of deck.c failed
+Compiling eval.c -> eval.o
+eval.c: In function ‘get_match_counts’:
+eval.c:294:35: error: ‘hands’ undeclared (first use in this function)
+       if(hand->cards[i]->value == hands->cards[j]->value) {
+                                   ^
+eval.c:294:35: note: each undeclared identifier is reported only once for each function it appears in
+Compilation of eval.c failed
 
 Overall Grade: F
