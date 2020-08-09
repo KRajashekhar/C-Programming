@@ -66,7 +66,7 @@ card_t * add_empty_card(deck_t * deck) {
   emt_card->value = 0;
   emt_card->suit = 0;
   add_card_to(deck, *emt_card);
-  free(card);
+  free(emt_card);
   return deck->cards[deck->n_cards-1];
 }
 
