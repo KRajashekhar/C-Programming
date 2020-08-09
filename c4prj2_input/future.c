@@ -15,7 +15,7 @@ void add_future_card(future_cards_t *fc, size_t index, card_t *ptr) {
   }
   while(fc->n_decks <= index) {
     fc->n_decks++;
-    fc->decks = realloc(fc->decks, (fc->decks->n_decks) * sizeof(*fc->decks));
+    fc->decks = realloc(fc->decks, (fc->n_decks) * sizeof(*fc->decks));
     fc->decks[fc->n_decks-1].cards = NULL;
     fc->decks[fc->n_decks-1].n_cards = 0;
   }
@@ -25,7 +25,7 @@ void add_future_card(future_cards_t *fc, size_t index, card_t *ptr) {
   return ;
 }
 
-void future_cards_from_deck(deck_t *deck, future_card_t *fc) {
+void future_cards_from_deck(deck_t *deck, future_cards_t *fc) {
   if(deck->n_cards < fc ->n_decks) {
     perror("Error in future_cards_from_deck");
     return;
